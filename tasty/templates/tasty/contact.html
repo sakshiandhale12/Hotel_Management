@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hotel Management</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Get in touch with us.</p>
+    </header>
+    <main>
+        <!-- Add content for the contact page here -->
+        <!-- Example: Contact form -->
+        <form method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2023 Hotel Management
+    </footer>
+</body>
+</html>

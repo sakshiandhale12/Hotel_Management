@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialties - Hotel Management</title>
+</head>
+<body>
+    <header>
+        <h1>Our Specialties</h1>
+        <p>Discover our unique offerings.</p>
+    </header>
+    <main>
+        <!-- Add content for the specialties page here -->
+        <!-- Example: Display specialities dynamically -->
+        <ul>
+            {% for specialty in specialities %}
+                <li>{{ specialty.name }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        &copy; 2023 Hotel Management
+    </footer>
+</body>
+</html>
