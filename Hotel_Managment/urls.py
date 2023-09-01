@@ -19,5 +19,5 @@ from django.urls import include, path  # Import the 'include' function
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('hotel_management.urls')),  # Include your app's URLs here
+    path('', include('tasty.urls')),  # Include your app's URLs here
 ]
