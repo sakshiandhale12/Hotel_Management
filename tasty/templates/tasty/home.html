@@ -1,20 +1,48 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Hotel Management</title>
+    <!-- Include CSS files within the <head> section -->
+    <link rel="stylesheet" href="{% static 'tasty/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tasty/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tasty/css/style.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <h1>Welcome to our Hotel</h1>
-        <p>Your perfect destination for a relaxing stay.</p>
-    </header>
+    <!-- Move the <img> tag within the <body> section -->
+    {% comment %} <img src="{% static 'tasty/image/img21.jpg' %}" class="img-fluid" alt="hotel image"> {% endcomment %}
+    
+    <div class="container-fliud">
+
+        <!-- Navigation links -->
+        <nav class="nav nav-dark d-flex justify-content-end">
+            <a href="{% url 'home' %}" class="btn btn-secondary nav-link {{ home }}">Home</a>
+            <a href="{% url 'menu' %}" class="nav-link {{ menu }}">Menu</a>
+            <a href="{% url 'speciality' %}" class="nav-link {{ speciality }}">Speciality</a>
+            <a href="{% url 'reservations' %}" class="nav-link {{ reservations }}">Reservations</a>
+            <a href="{% url 'blog' %}" class="nav-link {{ blog }}">Blog</a>
+            <a href="{% url 'about' %}" class="nav-link {{ about }}">About</a>
+            <a href="{% url 'contact' %}" class="nav-link {{ contact }}">Contact</a>
+        </nav>
+
+   
     <main>
-        <!-- Add content for the home page here -->
+        
+            
+        <h1 class="newfontstyle text-center">
+            Book a table for yourself at a time convenient for you
+        </h1>
+       
+    </div>
     </main>
-    <footer>
-        &copy; 2023 Hotel Management
-    </footer>
+
+    <!-- Include JavaScript files at the end of the <body> section -->
+    <script src="{% static 'tasty/js/jquery.js' %}"></script>
+    <script src="{% static 'tasty/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'tasty/js/popper.js' %}"></script>
+    <script src="{% static 'tasty/js/all.min.js' %}"></script>
 </body>
 </html>

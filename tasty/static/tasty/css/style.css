@@ -1,0 +1,18 @@
+body {
+    background-image: url("../image/img21.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* Optional: Set a background color as a fallback */
+    background-color: #f5f5f5; /* Replace with your desired background color */
+}
+
+  .newfontstyle{
+
+    font-family: "Indie Flower", cursive;
+    font-size: 72px;
+    color: whitesmoke;
+    line-height: 1.2;
+    font-weight: 400;
+  }
