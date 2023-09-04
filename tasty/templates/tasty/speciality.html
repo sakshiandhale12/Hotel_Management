@@ -1,26 +1,50 @@
 <!DOCTYPE html>
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Specialties - Hotel Management</title>
+    <link rel="stylesheet" href="{% static 'tasty/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/special.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
 </head>
 <body>
     <header>
         <h1>Our Specialties</h1>
-        <p>Discover our unique offerings.</p>
+        <h3>any thali  in only 199 per person ##Unlimited</h3>
     </header>
-    <main>
+    <main class="container">
         <!-- Add content for the specialties page here -->
-        <!-- Example: Display specialities dynamically -->
+        <div>
         <ul>
-            {% for specialty in specialities %}
-                <li>{{ specialty.name }}</li>
-            {% endfor %}
+            <h4>Maharashtrian thali </h4>
+            <img src="{% static 'tasty/image/maharashtra.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+            <br>
+            <h4>Punjabi thali</h4>
+            <img src="{% static 'tasty/image/punjabi.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+            <br>
+            <h4>gujrati thali</h4>
+            <img src="{% static 'tasty/image/gujrati.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">   
+            <h4>chiken thali </h4>
+            <img src="{% static 'tasty/image/nonveg.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+            <br>
+            <h4>chinese platter</h4>
+            <img src="{% static 'tasty/image/chinese.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+            <br>
+            <h4>pizza platter</h4>
+            <img src="{% static 'tasty/image/pizza22.jpg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+            <!-- Add more specialties here using a loop or dynamic data -->
         </ul>
+    </div>
     </main>
-    <footer>
-        &copy; 2023 Hotel Management
-    </footer>
+    <script src="{% static 'tasty/js/jquery.js' %}"></script>
+    <script src="{% static 'tasty/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'tasty/js/popper.js' %}"></script>
+    <script src="{% static 'tasty/js/all.min.js' %}"></script>
 </body>
 </html>

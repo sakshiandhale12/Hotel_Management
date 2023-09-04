@@ -1,35 +1,231 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Hotel Management</title>
+    <link rel="stylesheet" href="{% static 'tasty/css/menu.css' %}" />
+    <title>Responsive Menu</title>
+    <link rel="stylesheet" href="{% static 'tasty/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/menu.css' %}" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Indie+Flower"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <header>
-        <h1>Our Menu</h1>
-        <p>Explore our delicious offerings.</p>
-    </header>
-    <main>
-        <!-- Add content for the menu page here -->
-        <!-- Example: Display menu items dynamically -->
-        <ul>
-            {% for item in menu_items %}
-            <li>{{ item.name }} - ${{ item.price }}</li>
-            {% endfor %}
-        </ul>
 
-        <div class="">
+    <div class="container-fluid">
+            <!-- Navigation links -->
+        <nav class="nav nav-dark d-flex justify-content-start">
+        <a href="{% url 'home' %}" class="btn btn-dark nav-link  {{ home }}">Home</a>
+    </div>
 
+    {% comment %} <div class="header">
+        <div class="cuisine-menu">
+            <div class="menu-item col-sm-5 offset-sm-2">Maharashtrian</div>
+            <div class="menu-item">Punjabi</div>
+            <div class="menu-item">South Indian</div>
+            <div class="menu-item">Chinese</div>
+            <div class="menu-item">Snacks</div>
+            <div class="menu-item">Pizza</div>
+            <div class="menu-item">Starter</div>
+            <div class="menu-item">Drink</div>
+            <div class="menu-item">Sweet</div>
+            <!-- Add more cuisine items here -->
+        </div>
+    </div> {% endcomment %}
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/maha1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+
+                <label class="input-group-text" for="inputGroupSelect01">Maharashtr</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">misal pav</option>
+                  <option value="2">Pav Bhaji</option>
+                  <option value="3">Puran Poli</option>
+                  <option value="4">Bharli Vangi</option>
+                  <option value="5">Modak</option>
+                  <option value="6">Sabudana Khichdi</option>
+                  <option value="7">Taambda Pandhra Rassa</option>
+                  <option value="8">Bharli Bhindi</option>
+                  <option value="9">Pithla Bhakri</option>
+                  <option value="10">Sol Kadhi</option>
+                  <option value="11">amti bhakri</option>
+                  <option value="12">rassa vada</option>
+                </select>
+            </div>
+        </div>
+     
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/pun1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+
+                <label class="input-group-text" for="inputGroupSelect01">Punjabi</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Paratha</option>
+                  <option value="2">Dal Makhani</option>
+                  <option value="3">Amritsari Fish</option>
+                  <option value="4">Sarson da Saag</option>
+                  <option value="5">Makke di Roti</option>
+                  <option value="6">Shami Kebab</option>
+                  <option value="7">Tandoori Chicken</option>
+                  <option value="8">Butter Chicken</option>
+                  <option value="9">Rajma Chawal</option>
+                  <option value="10">Chana Masala</option>
+                  <option value="11">Paneer Tikka </option>
+                  <option value="12"> Chole Bhature</option>
+                  <option value="13">Pinni</option>
+                  <option value="14">Kada Prashad</option>
+                  <option value="15">Paratha</option>
+                  <option value="16">Paratha</option>
+                </select>
+            </div>
+    <br>
 
         </div>
+    
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/sou1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+                <label class="input-group-text" for="inputGroupSelect01">South Indian</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Pongal</option>
+                  <option value="2">Masala dosa</option>
+                  <option value="3">Chicken 65</option>
+                  <option value="1">Sambar</option>
+                  <option value="1">Pulihora</option>
+                  <option value="1">Appam</option>
+                  <option value="1">Upma</option>
+                  <option value="1">Hyderabadi biryani</option>
+                  <option value="1">rasam</option>
+                  <option value="1">kuzhambu</option>
+                </select>
+            </div>
+        </div>
 
-
-
-
-    </main>
-    <footer>
-        &copy; 2023 Hotel Management
-    </footer>
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/guj1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+                <label class="input-group-text" for="inputGroupSelect01">gujarati</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Dhokla</option>
+                  <option value="2">Undhiyu</option>
+                  <option value="3">Bhatia Kadhi</option>
+                  <option value="3">Thepla</option>
+                  <option value="3">Muthiya</option>
+                  <option value="3">Handvo</option>
+                  <option value="3">Fafda-Jalebi</option>
+                  <option value="3">Lilva Kachori</option>
+                  <option value="3">Dal Dhokli</option>
+                  <option value="3">badshahi khichdi</option>
+                  <option value="3">Bhatia Kadhi</option>
+                </select>
+            </div>
+        </div>
+     <br> 
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/chi1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+                <label class="input-group-text" for="inputGroupSelect01">Chinese</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Spring Rolls.</option>
+                  <option value="2">Kung Pao Chicken</option>
+                  <option value="3">Sweet and Sour Pork</option>
+                  <option value="3">Peking Roast Duck</option>
+                  <option value="3">Chow Mein</option>
+                  <option value="3">Chinese Hot Po</option>
+                  <option value="3">Wonton Soup</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/chi1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+                <label class="input-group-text" for="inputGroupSelect01">Pizza</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Pepperoni Pizza</option>
+                  <option value="2">Meat Pizza</option>
+                  <option value="3">Margherita Pizza</option>
+                  <option value="3">BBQ Chicken Pizza</option>
+                  <option value="3">Hawaiian Pizza</option>
+                  <option value="3">Buffalo Pizza</option>
+                  <option value="3">Quick Tomato Pizzas</option>
+                  <option value="3">Four Cheese Pizza</option>
+                  <option value="3">Cheesy Vegetable Pizza</option>
+                  <option value="3">Tandoori Paneer Pizza</option>
+                </select>
+            </div>
+        </div>
+      <br>
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/swee1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+                <label class="input-group-text" for="inputGroupSelect01">Sweet</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Gulab Jamun</option>
+                  <option value="2">Gajar Ka Halwa</option>
+                  <option value="3">Sandesh</option>
+                  <option value="3">Modak</option>
+                  <option value="3">Aam Shrikhand</option>
+                  <option value="3">Payasam</option>
+                  <option value="3">Kaju ki Barfi</option>
+                  <option value="3">Shahi Tukda</option>
+                  <option value="3"> Phirni</option>
+                  <option value="3"> Kulfi</option>
+                  <option value="3">Ney Appam</option>
+                  <option value="3">Malai Ghevar</option>
+                  <option value="3">Malai Gujiya </option>
+                  <option value="3">Seviyan Kheer </option>
+                  <option value="3">Fruit custard:</option>
+                  <option value="3">Rasmalai:</option>
+                  <option value="3">rasgullas</option>
+                </select>
+            </div>
+        </div>
+      
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <img src="{% static 'tasty/image/dri1.jpeg'%}" alt="profilepic" class="img-fluid rounded-circle mt-2" width="100px" height="100px">
+                <label class="input-group-text" for="inputGroupSelect01">Drink</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="1">Bellini</option>
+                  <option value="2">Ik Margarita</option>
+                  <option value="3">Mye Tye</option>
+                  <option value="4">Rum + Sorrel</option>
+                  <option value="5">Mezcalita de Jengibre</option>
+                  <option value="6">Macuá</option>
+                  <option value="7">Paradise Punch</option>
+                  <option value="8">Pomegranate Margarita</option>
+                </select>
+            </div>
+        </div>
+  
+    </div>
+    {% comment %} <footer>
+        <div class="text-right">
+            <a href="#" target="_blank" ><i class="fab fa-dribbble i-color mr-3"></i></a>        
+            <a href="#" target="_blank" ><i class="fab fa-facebook-f i-color mr-3"></i></a>
+            <a href="#" target="_blank" ><i class="fab fa-instagram i-color mr-3"></i></a>
+            <a href="#" target="_blank" ><i class="fab fa-twitter i-color mr-3"></i></a>
+        </div>
+    </footer> {% endcomment %}
+    <script src="{% static 'tasty/js/jquery.js' %}"></script>
+    <script src="{% static 'tasty/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'tasty/js/popper.js' %}"></script>
+    <script src="{% static 'tasty/js/all.min.js' %}"></script>
 </body>
 </html>

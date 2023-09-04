@@ -1,22 +1,64 @@
 <!DOCTYPE html>
+{% load static%}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'tasty/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/menu.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
     <title>About - Hotel Management</title>
-</head>
-<body>
-    <header>
-        <h1>About Us</h1>
-        <p>Learn more about our hotel and team.</p>
-    </header>
+  </head>
+  <body>
+    
+      <h1 class="text-warning border-bottom text-center">About Us</h1>
+      <h4>
+      <p>
+        We have spent years perfecting our craft, decades earning a reputation,
+        and centuries building a culture.
+      </p>
+      <p>
+        We call it Tajness - the soul of our robust hospitality ecosystem that
+        subtly guides all our behaviours. Tajness is the way we do, what we do.
+        And as we step into a world of newer possibilities, the spirit of
+        Tajness stands invigorated.
+      </p>
+      <p>
+        Tajness – A Commitment Restrengthened is a mark of assurance of IHCL’s
+        authentic Indian hospitality, with an added comfort of safety, hygiene
+        and physical distancing.
+      </p>
+      <p>So, what are you waiting for? Plan your trip to the colourful state of Banglore now! Run through the mustard fields, enjoy the lip-smacking food, pray at the Golden Temple and shop for vibrant dupattas to your heart's content.</p>
+    </h4>
+    
     <main>
-        <!-- Add content for the about page here -->
-        <!-- Example: Display about content dynamically -->
-        <p>{{ about_content.content }}</p>
+      <!-- Add content for the about page here -->
+      <!-- Example: Display about content dynamically -->
+      <p>{{ about_content.content }}</p>
     </main>
-    <footer>
-        &copy; 2023 Hotel Management
-    </footer>
-</body>
+    {% comment %} <footer>
+      <div class="text-center">
+        <a href="#" target="_blank"
+          ><i class="fab fa-twitter i-color mr-3"></i
+        ></a>
+        <a href="#" target="_blank"
+          ><i class="fab fa-facebook-f i-color mr-3"></i
+        ></a>
+        <a href="#" target="_blank"
+          ><i class="fab fa-instagram i-color mr-3"></i
+        ></a>
+        <a href="#" target="_blank"
+          ><i class="fab fa-dribbble i-color mr-3"></i
+        ></a>
+      </div>
+    </footer> {% endcomment %}
+    <script src="{% static 'tasty/js/jquery.js' %}"></script>
+    <script src="{% static 'tasty/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'tasty/js/popper.js' %}"></script>
+    <script src="{% static 'tasty/js/all.min.js' %}"></script>
+  </body>
 </html>

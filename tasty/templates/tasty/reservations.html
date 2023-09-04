@@ -1,35 +1,66 @@
 <!DOCTYPE html>
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservations - Hotel Management</title>
+    <link rel="stylesheet" href="{% static 'tasty/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasty/css/reservation.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Reservations</h1>
         <p>Book your stay with us.</p>
-    </header>
-    <main>
-        <!-- Add content for the reservations page here -->
-        <!-- Example: Reservation form -->
         <form method="post">
             {% csrf_token %}
-            <label for="name">Name:</label>
-            <input type="text" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" name="email" required>
-            <label for="phone">Phone:</label>
-            <input type="tel" name="phone" required>
-            <label for="date">Date:</label>
-            <input type="date" name="date" required>
-            <label for="time">Time:</label>
-            <input type="time" name="time" required>
-            <button type="submit">Submit</button>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-    </main>
+    </div>
+
     <footer>
-        &copy; 2023 Hotel Management
+        <div class="text-center">
+            <a href="#" target="_blank">
+                <i class="fab fa-twitter i-color mr-3"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook-f i-color mr-3"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram i-color mr-3"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-dribbble i-color mr-3"></i>
+            </a>
+        </div>
     </footer>
+
+    <script src="{% static 'tasty/js/jquery.js' %}"></script>
+    <script src="{% static 'tasty/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'tasty/js/popper.js' %}"></script>
+    <script src="{% static 'tasty/js/all.min.js' %}"></script>
 </body>
 </html>
