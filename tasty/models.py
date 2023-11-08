@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models 
 
 class Menu(models.Model):
     name = models.CharField(max_length=100)
@@ -30,3 +30,13 @@ class contact(models.Model):
 
 class About(models.Model):
     content = models.TextField()
+    
+class  LoginForm(models.Model):
+    username = models.CharField(max_length=100)
+    password= models.TextField()
+    
+
+class RegisterModel(models.Model):
+    username = models.CharField(max_length=100)
+    password = models.TextField()
+

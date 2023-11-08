@@ -1,19 +1,16 @@
-
 /* Additional custom CSS styles */
 body {
     background-color: #f8f8f8;
     font-family: 'Arial', sans-serif;
-    background-image: url("../image/img21.jpg"); 
-    color: whitesmoke;   
-
+    background-image: url("../image/img21.jpg");
+    color: whitesmoke;
 }
 
 .container {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    /* background-color: #fff; */
-    box-shadow: whitesmoke;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -21,7 +18,7 @@ h1 {
     margin-bottom: 20px;
     font-family: 'Indie Flower', cursive;
     font-weight: 900;
-    color: yellow;
+    color: rgb(243, 233, 233);
 }
 
 p {
@@ -40,18 +37,19 @@ label {
     font-weight: bold;
 }
 
+/* Adjusted input field styles */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
 input[type="time"],
 button[type="submit"] {
-    width: 100%;
-    padding: 100px;
+    width: 100%; /* Adjusted to 100% width */
+    padding: 10px; /* Adjusted padding */
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1px;
+    border-radius: 5px; /* Adjusted border-radius */
+    font-size: 14px; /* Adjusted font-size */
 }
 
 button[type="submit"] {
@@ -70,7 +68,7 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 footer .text-center {

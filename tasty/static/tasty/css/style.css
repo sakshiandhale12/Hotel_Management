@@ -28,4 +28,26 @@ margin-top: 150px;
   margin-top: 150px;
 }
 
+/* Custom column class for styling */
+.custom-column {
+  text-align: center;
+}
+
+.custom-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-column li {
+  margin-bottom: 1rem;
+}
+
+/* .custom-column i {
+  color:
+} */
+
+.custom-column p {
+  margin: 0;
+}
+
 
